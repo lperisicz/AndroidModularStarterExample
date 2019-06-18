@@ -28,18 +28,11 @@ dependencies {
 
     //MODULES
     implementation project(':base')
-    api 'com.github.lperisicz.AndroidModularStarter:remote:1.0.11'
+    api "com.github.lperisicz.AndroidModularStarter:remote:$rootProject.starterLibraryVersion"
 
     //DAGGER
     annotationProcessor "com.google.dagger:dagger-android-processor:$rootProject.daggerVersion"
     annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.daggerVersion"
-
-    //OKHTTP
-//    implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
-//    implementation "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
-
-    //GSON
-//    implementation "com.google.code.gson:gson:$gsonVersion"
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'

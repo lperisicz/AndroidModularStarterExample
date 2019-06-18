@@ -3,7 +3,7 @@ package com.perisic.luka.androidmodularstarterexample.di.component;
 import com.perisic.luka.androidmodularstarterexample.AndroidModularStarterApp;
 import com.perisic.luka.androidmodularstarterexample.di.module.AppModule;
 import com.perisic.luka.androidmodularstarterexample.di.module.ContributeActivityModule;
-import com.perisic.luka.remote.di.RemoteModule;
+import com.perisic.luka.repository.di.RepositoryModule;
 
 import javax.inject.Singleton;
 
@@ -20,7 +20,7 @@ import dagger.android.support.AndroidSupportInjectionModule;
         AndroidSupportInjectionModule.class,
         AppModule.class,
         ContributeActivityModule.class,
-        RemoteModule.class
+        RepositoryModule.class
 })
 public interface AppComponent extends AndroidInjector<AndroidModularStarterApp> {
 

@@ -33,6 +33,7 @@ buildscript {
         gsonVersion = "2.8.5"
         okHttpVersion = '3.13.1'
         roomVersion = "1.1.1"
+        starterLibraryVersion = "1.0.26"
     }
 }
 

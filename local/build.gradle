@@ -28,7 +28,9 @@ dependencies {
 
     //MODULES
     implementation project(':base')
-    api 'com.github.lperisicz.AndroidModularStarter:local:1.0.11'
+    api "com.github.lperisicz.AndroidModularStarter:local:$rootProject.starterLibraryVersion"
+
+    //ROOM
     annotationProcessor "android.arch.persistence.room:compiler:$roomVersion"
 
     //DAGGER
