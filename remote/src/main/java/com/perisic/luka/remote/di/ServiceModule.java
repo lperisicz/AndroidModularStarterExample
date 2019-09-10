@@ -1,6 +1,6 @@
 package com.perisic.luka.remote.di;
 
-import com.perisic.luka.remote.services.WalletService;
+import com.perisic.luka.remote.services.PostService;
 
 import javax.inject.Singleton;
 
@@ -16,8 +16,8 @@ public abstract class ServiceModule {
 
     @Provides
     @Singleton
-    static WalletService providesWalletService(Retrofit retrofit) {
-        return retrofit.create(WalletService.class);
+    static PostService providesWalletService(Retrofit retrofit) {
+        return retrofit.create(PostService.class);
     }
 
 }

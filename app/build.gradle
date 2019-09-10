@@ -28,6 +28,8 @@ dependencies {
     //MODULES
     implementation project(':base')
     implementation project(':repository')
+    implementation project(':auth')
+    implementation project(':main')
 
     //DAGGER
     annotationProcessor "com.google.dagger:dagger-android-processor:$rootProject.daggerVersion"

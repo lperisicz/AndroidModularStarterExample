@@ -7,8 +7,10 @@ import androidx.lifecycle.ViewModel;
 import com.perisic.luka.remote.data.helper.BaseData;
 import com.perisic.luka.remote.data.helper.BaseResponse;
 import com.perisic.luka.remote.data.helper.LiveDataResource;
-import com.perisic.luka.remote.data.response.WalletStatusResponse;
-import com.perisic.luka.repository.repos.abstraction.WalletRepository;
+import com.perisic.luka.remote.data.response.Post;
+import com.perisic.luka.repository.repos.abstraction.PostRepository;
+
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -17,24 +19,24 @@ import javax.inject.Inject;
  */
 class MainViewModel extends ViewModel {
 
-    private WalletRepository walletRepository;
+    private PostRepository postRepository;
     private MutableLiveData<BaseData.Status> status = new MutableLiveData<>();
-    private LiveDataResource<BaseResponse<WalletStatusResponse>> walletStatusResponse = new LiveDataResource<>(status::setValue);
+    private LiveDataResource<BaseResponse<List<Post>>> postListResponse = new LiveDataResource<>(status::setValue);
 
     @Inject
-    MainViewModel(WalletRepository walletRepository) {
-        this.walletRepository = walletRepository;
+    MainViewModel(PostRepository postRepository) {
+        this.postRepository = postRepository;
     }
 
     void fetchWalletStatus() {
-        walletStatusResponse.addLiveDataSource(
-                walletRepository.getWalletStatus(),
-                walletStatusResponse::setValue
+        postListResponse.addLiveDataSource(
+                postRepository.getPostList(),
+                postListResponse::setValue
         );
     }
 
-    LiveDataResource<BaseResponse<WalletStatusResponse>> getWalletStatusResponse() {
-        return walletStatusResponse;
+    LiveDataResource<BaseResponse<List<Post>>> getPostListResponse() {
+        return postListResponse;
     }
 
     LiveData<BaseData.Status> getStatus() {

@@ -2,8 +2,8 @@ package com.perisic.luka.repository.di;
 
 import com.perisic.luka.local.di.RoomModule;
 import com.perisic.luka.remote.di.ServiceModule;
-import com.perisic.luka.repository.repos.abstraction.WalletRepository;
-import com.perisic.luka.repository.repos.implementation.WalletRepositoryImpl;
+import com.perisic.luka.repository.repos.abstraction.PostRepository;
+import com.perisic.luka.repository.repos.implementation.PostRepositoryImpl;
 
 import javax.inject.Singleton;
 
@@ -18,6 +18,6 @@ public abstract class RepositoryModule {
 
     @Binds
     @Singleton
-    abstract WalletRepository bindsWalletRepository(WalletRepositoryImpl walletRepository);
+    abstract PostRepository bindsPostRepository(PostRepositoryImpl postRepository);
 
 }

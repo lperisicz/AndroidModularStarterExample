@@ -17,7 +17,7 @@ public abstract class RemoteModule {
     @Singleton
     @BaseUrl
     static String provideBaseUrl() {
-        return "https://api.ispeaky.app/api/";
+        return "https://sails-test-1.herokuapp.com/api/";
     }
 
 }
